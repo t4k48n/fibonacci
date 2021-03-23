@@ -1,4 +1,12 @@
 def fibonacci(n):
+    """ フィボナッチ数列のn番目を計算する．
+
+    定義:
+        fibonacci(0) = 0
+        fibonacci(1) = 1
+        fibonacci(2) = fibonacci(n - 1) + fibonacci(n - 2)
+        ただし，n >=0
+    """
     if n in fibonacci.memo:
         return fibonacci.memo[n]
     if n <= 1:
@@ -9,6 +17,14 @@ def fibonacci(n):
 fibonacci.memo = {}
 
 def fibonacci_list(n):
+    """ フィボナッチ数列のn番目を計算する．
+
+    定義:
+        fibonacci(0) = 0
+        fibonacci(1) = 1
+        fibonacci(2) = fibonacci(n - 1) + fibonacci(n - 2)
+        ただし，n >=0
+    """
     return [fibonacci(i) for i in range(0, n + 1)]
 
 N = 10
